@@ -150,6 +150,7 @@ class _VideoCustomControlsState extends State<VideoCustomControls>
             children: [
               _buildSubtitleToggle(),
               if (chewieController.showOptions) _buildOptionsButton(),
+              if (chewieController.allowFullScreen) _buildExpandButton(),
             ],
           ),
         ),
@@ -275,7 +276,7 @@ class _VideoCustomControlsState extends State<VideoCustomControls>
                     if (chewieController.allowMuting)
                       _buildMuteButton(controller),
                     const Spacer(),
-                    if (chewieController.allowFullScreen) _buildExpandButton(),
+                    // if (chewieController.allowFullScreen) _buildExpandButton(),
                   ],
                 ),
               ),
